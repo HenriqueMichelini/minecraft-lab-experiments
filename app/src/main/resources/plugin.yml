@@ -1,0 +1,7 @@
+name: MinecraftLabExperiments
+version: 0.0.1
+main: io.github.henriquemichelini.Main
+description: MinecraftLabExperiments
+author: Henrique Michelini
+website: github.com/HenriqueMichelini
+api-version: '26.2'
