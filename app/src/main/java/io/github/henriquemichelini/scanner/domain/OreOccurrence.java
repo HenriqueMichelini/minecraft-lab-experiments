@@ -1,6 +1,6 @@
 package io.github.henriquemichelini.scanner.domain;
 
-public record OreOcurrency(
+public record OreOccurrence(
         BlockPosition position,
         BlockType type
     )

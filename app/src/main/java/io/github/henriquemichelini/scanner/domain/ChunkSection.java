@@ -22,7 +22,7 @@ public class ChunkSection {
 
     public BlockType blockAt(int index)
     {
-        return blockAt(index);
+        return blocks[index];
     }
 
     public int size()  {
