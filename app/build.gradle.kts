@@ -12,6 +12,10 @@ plugins {
 
 repositories {
     // Use Maven Central for resolving dependencies.
+    maven {
+        name = "papermc"
+        url = uri("https://repo.papermc.io/repository/maven-public/")
+    }
     mavenCentral()
 }
 
@@ -20,7 +24,7 @@ dependencies {
     testImplementation(libs.junit.jupiter)
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
+    compileOnly("io.papermc.paper:paper-api:26.2.build.+")
     // This dependency is used by the application.
     implementation(libs.guava)
 }
@@ -34,7 +38,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.App"
+    mainClass = "io.github.henriquemichelini.Main"
 }
 
 tasks.named<Test>("test") {
