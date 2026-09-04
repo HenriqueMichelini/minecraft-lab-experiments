@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("me.champeau.jmh") version "0.7.3"
 }
 
 repositories {
@@ -25,8 +26,15 @@ dependencies {
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     compileOnly("io.papermc.paper:paper-api:26.2.build.+")
+
+    testImplementation("org.openjdk.jmh:jmh-core:1.37")
+
     // This dependency is used by the application.
     implementation(libs.guava)
+}
+
+jmh {
+    profilers.set(listOf("gc"))
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
