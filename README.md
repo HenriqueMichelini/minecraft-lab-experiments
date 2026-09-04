@@ -40,3 +40,20 @@ Compared with the object-based reference implementation,
 the fixed short[] representation reached ~18.8x higher
 throughput on FULL sections while reducing allocation from
 ~247 KB/op to ~8.2 KB/op.
+
+FINDING-007
+
+Geometric dynamic growth greatly reduces wasted memory
+for sparse outputs, but multiple allocations and copies
+substantially reduce throughput.
+
+Only EMPTY outperformed the fixed short[] implementation.
+For every non-empty workload, fixed short[] was faster.
+
+FINDING-008
+
+Allocation volume alone is not a sufficient proxy for
+allocation cost.
+
+SPARSE dynamic output allocated only ~296 B/op versus
+~8.2 KB/op for fixed short[], yet ran ~52% slower.
