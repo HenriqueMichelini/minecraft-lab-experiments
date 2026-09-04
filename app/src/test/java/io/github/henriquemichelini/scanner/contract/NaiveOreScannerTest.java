@@ -1,4 +1,4 @@
-package scanner.contract;
+package io.github.henriquemichelini.scanner.contract;
 
 import io.github.henriquemichelini.scanner.domain.OreScanner;
 import io.github.henriquemichelini.scanner.infra.NaiveOreScanner;

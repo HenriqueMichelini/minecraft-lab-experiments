@@ -1,6 +1,5 @@
-package dataset;
+package io.github.henriquemichelini.dataset.infra;
 
-import io.github.henriquemichelini.dataset.infra.FixedDataset;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

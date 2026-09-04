@@ -1,11 +1,10 @@
-package scanner.infra;
+package io.github.henriquemichelini.scanner.infra;
 
 import io.github.henriquemichelini.dataset.domain.DatasetScenario;
 import io.github.henriquemichelini.dataset.domain.DatasetSize;
 import io.github.henriquemichelini.dataset.domain.DatasetSpec;
 import io.github.henriquemichelini.dataset.infra.SyntheticDatasetGenerator;
 import io.github.henriquemichelini.scanner.domain.ChunkSection;
-import io.github.henriquemichelini.scanner.infra.NaiveOreScanner;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 

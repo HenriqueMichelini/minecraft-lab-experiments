@@ -1,4 +1,4 @@
-package scanner.domain;
+package io.github.henriquemichelini.scanner.domain;
 
 import io.github.henriquemichelini.scanner.domain.BlockType;
 import io.github.henriquemichelini.scanner.domain.ChunkSection;
