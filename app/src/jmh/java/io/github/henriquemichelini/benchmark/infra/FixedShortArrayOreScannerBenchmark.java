@@ -5,8 +5,8 @@
 //import io.github.henriquemichelini.dataset.domain.DatasetSpec;
 //import io.github.henriquemichelini.dataset.infra.SyntheticDatasetGenerator;
 //import io.github.henriquemichelini.scanner.domain.ChunkSection;
-//import io.github.henriquemichelini.scanner.domain.OreIndexScanResult;
-//import io.github.henriquemichelini.scanner.infra.FixedIntArrayOreScanner;
+//import io.github.henriquemichelini.scanner.domain.ShortOreIndexScanResult;
+//import io.github.henriquemichelini.scanner.infra.FixedShortArrayOreScanner;
 //import org.openjdk.jmh.annotations.*;
 //
 //import java.util.concurrent.TimeUnit;
@@ -25,7 +25,7 @@
 //)
 //@Fork(2)
 //@State(Scope.Thread)
-//public class FixedIntArrayOreScannerBenchmark {
+//public class FixedShortArrayOreScannerBenchmark {
 //
 //    @Param({
 //            "EMPTY",
@@ -37,13 +37,13 @@
 //    })
 //    public String scenario;
 //
-//    private FixedIntArrayOreScanner scanner;
+//    private FixedShortArrayOreScanner scanner;
 //    private ChunkSection section;
 //
 //    @Setup(Level.Trial)
 //    public void setup() {
 //        scanner =
-//                new FixedIntArrayOreScanner();
+//                new FixedShortArrayOreScanner();
 //
 //        var dataset =
 //                new SyntheticDatasetGenerator()
@@ -62,7 +62,7 @@
 //    }
 //
 //    @Benchmark
-//    public OreIndexScanResult scan() {
+//    public ShortOreIndexScanResult scan() {
 //        return scanner.scan(section);
 //    }
 //}

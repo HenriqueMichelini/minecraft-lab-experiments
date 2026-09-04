@@ -21,3 +21,22 @@ Even SPARSE improved ~2x despite allocating ~6.3x more
 bytes, indicating that allocation volume alone does not
 describe allocation cost; object count and memory layout
 matter substantially.
+
+FINDING-005
+
+A fixed short[4096] result buffer outperformed the equivalent
+int[4096] buffer in every tested distribution.
+
+Allocation dropped from ~16.4 KB/op to ~8.2 KB/op (-49.9%),
+while throughput improved between ~6% and ~32%.
+
+This suggests that primitive width matters even for this small
+working set, likely due to reduced allocation/zeroing cost,
+memory traffic and cache footprint.
+
+FINDING-006
+
+Compared with the object-based reference implementation,
+the fixed short[] representation reached ~18.8x higher
+throughput on FULL sections while reducing allocation from
+~247 KB/op to ~8.2 KB/op.
