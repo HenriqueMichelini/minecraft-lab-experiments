@@ -6,7 +6,7 @@
 //import io.github.henriquemichelini.dataset.infra.SyntheticDatasetGenerator;
 //import io.github.henriquemichelini.scanner.domain.ChunkSection;
 //import io.github.henriquemichelini.scanner.domain.ShortOreIndexScanResult;
-//import io.github.henriquemichelini.scanner.infra.DynamicShortArrayOreScanner;
+//import io.github.henriquemichelini.scanner.infra.ExactShortArrayOreScanner;
 //import org.openjdk.jmh.annotations.*;
 //
 //import java.util.concurrent.TimeUnit;
@@ -25,7 +25,7 @@
 //)
 //@Fork(2)
 //@State(Scope.Thread)
-//public class DynamicShortArrayOreScannerBenchmark {
+//public class ExactShortArrayOreScannerBenchmark {
 //
 //    @Param({
 //            "EMPTY",
@@ -37,13 +37,13 @@
 //    })
 //    public String scenario;
 //
-//    private DynamicShortArrayOreScanner scanner;
+//    private ExactShortArrayOreScanner scanner;
 //    private ChunkSection section;
 //
 //    @Setup(Level.Trial)
 //    public void setup() {
 //        scanner =
-//                new DynamicShortArrayOreScanner();
+//                new ExactShortArrayOreScanner();
 //
 //        var dataset =
 //                new SyntheticDatasetGenerator()

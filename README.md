@@ -57,3 +57,28 @@ allocation cost.
 
 SPARSE dynamic output allocated only ~296 B/op versus
 ~8.2 KB/op for fixed short[], yet ran ~52% slower.
+
+FINDING-009
+
+Two-pass exact allocation minimizes result memory extremely well.
+
+Compared with fixed short[4096]:
+- SPARSE allocation fell ~98.4%
+- NORMAL allocation fell ~94.5%
+- DENSE allocation fell ~74.6%
+- RANDOM_50 allocation fell ~49.8%
+
+The cost is lower throughput caused by scanning the input twice.
+
+FINDING-010
+
+Among the tested short[] strategies:
+
+FixedShortArrayOreScanner
+→ best general throughput
+
+ExactShortArrayOreScanner
+→ best final-memory efficiency
+
+DynamicShortArrayOreScanner
+→ generally dominated by one of the other strategies
